@@ -64,14 +64,14 @@ class SettingsControlsCard extends ConsumerWidget {
             title: const Text('Notifications'),
             subtitle: const Text('Events, alerts and community updates'),
             value: settings.notificationsEnabled,
-            onChanged: (enabled) => _guard(context, () => notifier.setNotificationsEnabled(enabled)),
+            onChanged: (enabled) => _guard(context, () => notifier.setNotificationsEnabled(enabled: enabled)),
           ),
           SwitchListTile(
             secondary: const Icon(Icons.fingerprint_rounded),
             title: const Text('Biometric lock'),
             subtitle: const Text('Require authentication to open the app'),
             value: settings.biometricLockEnabled,
-            onChanged: (enabled) => _guard(context, () => notifier.setBiometricLockEnabled(enabled)),
+            onChanged: (enabled) => _guard(context, () => notifier.setBiometricLockEnabled(enabled: enabled)),
           ),
           ListTile(
             leading: const Icon(Icons.flag_rounded),
